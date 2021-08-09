@@ -18,7 +18,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.blue.shade100),
+      theme:
+          ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
       title: env['NAME'].toString(),
       home: env['IS_LOGIN'] != null ? HomePage() : WelcomePage(),
     );

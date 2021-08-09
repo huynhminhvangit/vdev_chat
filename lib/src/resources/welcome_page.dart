@@ -46,7 +46,9 @@ class _WelcomePageState extends State<WelcomePage> {
                 'wherever and whenever',
                 style: TextStyle(fontSize: 18, color: Color(0xff9e9e9e)),
               ),
-              SizedBox(height: 90,),
+              SizedBox(
+                height: 90,
+              ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xff303030),
@@ -61,14 +63,13 @@ class _WelcomePageState extends State<WelcomePage> {
                   height: 60,
                   child: Text(
                     'Continue with phone',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white
-                    ),
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
               ),
-              SizedBox(height: 20,)
+              SizedBox(
+                height: 20,
+              )
             ],
           ),
         ),
@@ -84,9 +85,8 @@ class _WelcomePageState extends State<WelcomePage> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: env['NAME'].toString(),
-      theme: ThemeData(
-        primaryColor: Colors.blue.shade100
-      ),
+      theme:
+          ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
       home: LoginPage(),
     );
   }
