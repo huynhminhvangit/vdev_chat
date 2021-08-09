@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:vdev_chat/src/resources/login_page.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.center,
         padding: EdgeInsets.all(20),
         constraints: BoxConstraints.expand(),
         child: SingleChildScrollView(
@@ -53,7 +54,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: _onLogin,
                 child: Container(
                   alignment: Alignment.center,
                   width: double.infinity,
@@ -72,6 +73,21 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
         ),
       ),
+    );
+  }
+
+  _onLogin() {
+    Navigator.push(context, MaterialPageRoute(builder: gotoLogin));
+  }
+
+  Widget gotoLogin(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: env['NAME'].toString(),
+      theme: ThemeData(
+        primaryColor: Colors.blue.shade100
+      ),
+      home: LoginPage(),
     );
   }
 }
