@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:vdev_chat/src/resources/setup_name_page.dart';
 
 class VerifyCodePage extends StatefulWidget {
   const VerifyCodePage({Key? key}) : super(key: key);
@@ -14,17 +16,14 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
   final code3Controller = TextEditingController();
   final code4Controller = TextEditingController();
 
-  var code1IsEditing = true;
-  var code2IsEditing = true;
-  var code3IsEditing = true;
-  var code4IsEditing = true;
-
   final code1FocusNode = FocusNode();
   final code2FocusNode = FocusNode();
   final code3FocusNode = FocusNode();
   final code4FocusNode = FocusNode();
 
+  final env = dotenv.env;
 
+  GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +33,8 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Form(
+            key: _globalFormKey,
+            autovalidateMode: AutovalidateMode.always,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,30 +69,46 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       width: 80,
                       height: 80,
                       child: TextFormField(
+                        validator: (String? value) {
+                          if (value!.length > 0) {
+                            return null;
+                          } else {
+                            return "";
+                          }
+                        },
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
                           LengthLimitingTextInputFormatter(1),
                         ],
                         controller: code1Controller,
                         focusNode: code1FocusNode,
+                        autofocus: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50),
-                              ),
-                              borderSide: BorderSide(
-                                  color: Color(0xffdcdcdc),
-                                  style: BorderStyle.solid,
-                                  width: 1)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50),
+                            ),
+                            borderSide: BorderSide(
+                              color: Color(0xffdcdcdc),
+                              style: BorderStyle.solid,
+                              width: 1,
+                            ),
+                          ),
+                          errorStyle: TextStyle(
+                            height: 0,
+                          ),
                         ),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 36, fontWeight: FontWeight.bold),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                        ),
                         textInputAction: TextInputAction.next,
                         keyboardType: TextInputType.number,
                         onChanged: (String? value) {
-                          if(value!.length > 0) {
+                          if (value!.length > 0) {
                             code1FocusNode.nextFocus();
+                            _checkCodeAndSend();
                           }
                         },
                       ),
@@ -101,6 +118,13 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       width: 80,
                       height: 80,
                       child: TextFormField(
+                        validator: (String? value) {
+                          if (value!.length > 0) {
+                            return null;
+                          } else {
+                            return "";
+                          }
+                        },
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
                           LengthLimitingTextInputFormatter(1),
@@ -109,22 +133,30 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         focusNode: code2FocusNode,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50),
-                              ),
-                              borderSide: BorderSide(
-                                  color: Color(0xffdcdcdc),
-                                  style: BorderStyle.solid,
-                                  width: 1)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50),
+                            ),
+                            borderSide: BorderSide(
+                              color: Color(0xffdcdcdc),
+                              style: BorderStyle.solid,
+                              width: 1,
+                            ),
+                          ),
+                          errorStyle: TextStyle(
+                            height: 0,
+                          ),
                         ),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 36, fontWeight: FontWeight.bold),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                        ),
                         textInputAction: TextInputAction.next,
                         keyboardType: TextInputType.number,
                         onChanged: (String? value) {
-                          if(value!.length > 0) {
+                          if (value!.length > 0) {
                             code2FocusNode.nextFocus();
+                            _checkCodeAndSend();
                           } else {
                             code2FocusNode.previousFocus();
                           }
@@ -136,6 +168,13 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       width: 80,
                       height: 80,
                       child: TextFormField(
+                        validator: (String? value) {
+                          if (value!.length > 0) {
+                            return null;
+                          } else {
+                            return "";
+                          }
+                        },
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
                           LengthLimitingTextInputFormatter(1),
@@ -144,22 +183,30 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         focusNode: code3FocusNode,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50),
-                              ),
-                              borderSide: BorderSide(
-                                  color: Color(0xffdcdcdc),
-                                  style: BorderStyle.solid,
-                                  width: 1)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50),
+                            ),
+                            borderSide: BorderSide(
+                              color: Color(0xffdcdcdc),
+                              style: BorderStyle.solid,
+                              width: 1,
+                            ),
+                          ),
+                          errorStyle: TextStyle(
+                            height: 0,
+                          ),
                         ),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 36, fontWeight: FontWeight.bold),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                        ),
                         textInputAction: TextInputAction.next,
                         keyboardType: TextInputType.number,
                         onChanged: (String? value) {
-                          if(value!.length > 0) {
+                          if (value!.length > 0) {
                             code3FocusNode.nextFocus();
+                            _checkCodeAndSend();
                           } else {
                             code3FocusNode.previousFocus();
                           }
@@ -171,6 +218,13 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                       width: 80,
                       height: 80,
                       child: TextFormField(
+                        validator: (String? value) {
+                          if (value!.length > 0) {
+                            return null;
+                          } else {
+                            return "";
+                          }
+                        },
                         inputFormatters: [
                           FilteringTextInputFormatter.digitsOnly,
                           LengthLimitingTextInputFormatter(1),
@@ -179,22 +233,29 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         focusNode: code4FocusNode,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50),
-                              ),
-                              borderSide: BorderSide(
-                                  color: Color(0xffdcdcdc),
-                                  style: BorderStyle.solid,
-                                  width: 1)),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(50),
+                            ),
+                            borderSide: BorderSide(
+                              color: Color(0xffdcdcdc),
+                              style: BorderStyle.solid,
+                              width: 1,
+                            ),
+                          ),
+                          errorStyle: TextStyle(
+                            height: 0
+                          ),
                         ),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            fontSize: 36, fontWeight: FontWeight.bold),
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                        ),
                         textInputAction: TextInputAction.send,
                         keyboardType: TextInputType.number,
                         onChanged: (String? value) {
-                          if(value!.length > 0) {
-                            //
+                          if (value!.length > 0) {
+                            _checkCodeAndSend();
                           } else {
                             code4FocusNode.previousFocus();
                           }
@@ -231,4 +292,19 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
     );
   }
 
+  void _checkCodeAndSend() {
+    if (_globalFormKey.currentState!.validate()) {
+      Navigator.push(context, MaterialPageRoute(builder: gotoSetupName));
+    }
+  }
+
+  Widget gotoSetupName(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: env['NAME'].toString(),
+      theme:
+          ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
+      home: SetupNamePage(),
+    );
+  }
 }
