@@ -1,5 +1,9 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class SetupPhotoPage extends StatefulWidget {
   const SetupPhotoPage({Key? key}) : super(key: key);
@@ -9,10 +13,66 @@ class SetupPhotoPage extends StatefulWidget {
 }
 
 class _SetupPhotoPageState extends State<SetupPhotoPage> {
-
   final env = dotenv.env;
 
   GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
+
+  late XFile _image = XFile('');
+
+  _chooseImage(BuildContext context) {
+    showModalBottomSheet(
+        context: context,
+        builder: (BuildContext context) {
+          return SafeArea(
+            child: Container(
+              child: Wrap(
+                children: [
+                  ListTile(
+                    onTap: () {
+                      _fromCamera();
+                      Navigator.of(context).pop();
+                    },
+                    leading: Icon(Icons.camera_alt),
+                    title: Text('Camera'),
+                  ),
+                  ListTile(
+                    onTap: () {
+                      _fromGallery();
+                      Navigator.of(context).pop();
+                    },
+                    leading: Icon(Icons.image),
+                    title: Text('Gallery'),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
+  _fromCamera() async {
+    final image = await ImagePicker()
+        .pickImage(source: ImageSource.camera, imageQuality: 60);
+
+    if (image != null) {
+      setState(() {
+        _image = image;
+      });
+    }
+  }
+
+  _fromGallery() async {
+    final image = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 60,
+    );
+
+    if (image != null) {
+      setState(() {
+        _image = image;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,9 +126,42 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                 SizedBox(
                   height: 80,
                 ),
-                CircleAvatar(
-                  backgroundColor: Colors.blue.shade200,
-                  
+                GestureDetector(
+                  onTap: () {
+                    _chooseImage(context);
+                  },
+                  child: CircleAvatar(
+                    backgroundColor: Colors.transparent,
+                    radius: 130,
+                    child: _image.path == ''
+                        ? DottedBorder(
+                            color: Colors.grey.shade500,
+                            strokeWidth: 1,
+                            dashPattern: [16, 8],
+                            radius: Radius.circular(100),
+                            borderType: BorderType.RRect,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              width: 200,
+                              height: 200,
+                              child: Icon(
+                                Icons.camera_alt_outlined,
+                                color: Colors.grey.shade500,
+                              ),
+                            ),
+                          )
+                        : ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.file(
+                              File(_image.path),
+                              width: 200,
+                              height: 200,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                  ),
                 ),
                 SizedBox(
                   height: 80,
