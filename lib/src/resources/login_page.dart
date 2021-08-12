@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 import 'package:vdev_chat/src/helpers/validator.dart';
+import 'package:vdev_chat/src/resources/dialogs/loading_dialog.dart';
 import 'package:vdev_chat/src/resources/verify_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -134,10 +136,15 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  _onLogin() {
+  _onLogin() async {
+
     if (_globalFormKey.currentState!.validate()) {
+      LoadingDialog.show(context);
+      await Future.delayed(Duration(seconds: 1));
+      LoadingDialog.hide(context);
       Navigator.push(context, MaterialPageRoute(builder: gotoVerifyCode));
     }
+
   }
 
   Widget gotoVerifyCode(BuildContext context) {

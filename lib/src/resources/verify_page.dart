@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:vdev_chat/src/resources/dialogs/loading_dialog.dart';
 import 'package:vdev_chat/src/resources/setup_name_page.dart';
 
 class VerifyCodePage extends StatefulWidget {
@@ -292,8 +293,11 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
     );
   }
 
-  void _checkCodeAndSend() {
+  void _checkCodeAndSend() async {
     if (_globalFormKey.currentState!.validate()) {
+      LoadingDialog.show(context);
+      await Future.delayed(Duration(seconds: 1));
+      LoadingDialog.hide(context);
       Navigator.push(context, MaterialPageRoute(builder: gotoSetupName));
     }
   }

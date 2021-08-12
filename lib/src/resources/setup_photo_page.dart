@@ -19,6 +19,8 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
 
   late XFile _image = XFile('');
 
+  bool isLoading = false;
+
   _chooseImage(BuildContext context) {
     showModalBottomSheet(
         context: context,
@@ -29,6 +31,9 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                 children: [
                   ListTile(
                     onTap: () {
+                      setState(() {
+                        isLoading = !isLoading;
+                      });
                       _fromCamera();
                       Navigator.of(context).pop();
                     },
@@ -37,6 +42,9 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                   ),
                   ListTile(
                     onTap: () {
+                      setState(() {
+                        isLoading = !isLoading;
+                      });
                       _fromGallery();
                       Navigator.of(context).pop();
                     },
@@ -146,10 +154,12 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                               ),
                               width: 200,
                               height: 200,
-                              child: Icon(
-                                Icons.camera_alt_outlined,
-                                color: Colors.grey.shade500,
-                              ),
+                              child: isLoading
+                                  ? CircularProgressIndicator()
+                                  : Icon(
+                                      Icons.camera_alt_outlined,
+                                      color: Colors.grey.shade500,
+                                    ),
                             ),
                           )
                         : ClipRRect(
