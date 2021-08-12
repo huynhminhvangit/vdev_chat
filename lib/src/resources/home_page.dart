@@ -36,12 +36,23 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                    'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Icon(
+                      Icons.check_outlined,
+                      color: Color(0xff9f9f9f),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Hello Charly Dang, ....',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -55,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                         height: 12,
                         decoration: BoxDecoration(
                           color: Colors.green,
-                          borderRadius: BorderRadius.circular(6)
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -66,20 +77,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.bold
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -97,12 +110,23 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Icon(
+                      Icons.done_all_outlined,
+                      color: Color(0xff9f9f9f),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Hello Charly Dang, ....',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -115,8 +139,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -127,20 +151,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -158,12 +184,23 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Icon(
+                      Icons.image_outlined,
+                      color: Color(0xff9f9f9f),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Photo',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -176,8 +213,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -188,20 +225,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -219,12 +258,23 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Icon(
+                      Icons.videocam,
+                      color: Color(0xff9f9f9f),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Video',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -237,8 +287,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -249,20 +299,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -280,12 +332,30 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Icon(
+                      Icons.check_outlined,
+                      color: Color(0xff9f9f9f),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Icon(
+                      Icons.headset,
+                      color: Color(0xff9f9f9f),
+                    ),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      'Audio',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -298,8 +368,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -310,20 +380,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -341,12 +413,16 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Text(
+                      'Hello!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -359,8 +435,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -371,20 +447,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -402,12 +480,16 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Text(
+                      'Hello!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -420,8 +502,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -432,20 +514,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -463,12 +547,16 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Text(
+                      'Hello!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -481,8 +569,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -493,20 +581,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -524,12 +614,16 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
+                subtitle: Row(
+                  children: [
+                    Text(
+                      'Hello!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Color(0xff9f9f9f),
+                      ),
+                    ),
+                  ],
                 ),
                 leading: Stack(
                   children: [
@@ -542,8 +636,8 @@ class _HomePageState extends State<HomePage> {
                         width: 12,
                         height: 12,
                         decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6),
                         ),
                       ),
                       bottom: 0,
@@ -554,508 +648,22 @@ class _HomePageState extends State<HomePage> {
                 trailing: Column(
                   children: [
                     Text('9:30'),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Container(
                       alignment: Alignment.center,
                       width: 26,
                       height: 26,
                       decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(13),
                       ),
                       child: Text(
                         '2',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ListTile(
-                title: Padding(
-                  padding: EdgeInsets.only(bottom: 7),
-                  child: Text(
-                    'David Vang',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                subtitle: Text(
-                  'Hello Charly Dang, ....',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Color(0xff9f9f9f),
-                  ),
-                ),
-                leading: Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      child: FlutterLogo(),
-                    ),
-                    Positioned(
-                      child: Container(
-                        width: 12,
-                        height: 12,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                      ),
-                      bottom: 0,
-                      right: 5,
-                    ),
-                  ],
-                ),
-                trailing: Column(
-                  children: [
-                    Text('9:30'),
-                    SizedBox(height: 5,),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 26,
-                      height: 26,
-                      decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.circular(13)
-                      ),
-                      child: Text(
-                        '2',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     )
@@ -1066,7 +674,60 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.edit,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.black,
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: Color(0xff9f9f9f),
+        ),
+        selectedLabelStyle: TextStyle(
+          fontSize: 14,
+          color: Colors.black,
+        ),
+        unselectedLabelStyle: TextStyle(
+          fontSize: 14,
+          color: Color(0xff9f9f9f),
+        ),
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Color(0xff9f9f9f),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.messenger_outline,
+            ),
+            label: 'Messages',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.contacts_outlined,
+            ),
+            label: 'Contacts',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.call_outlined,
+            ),
+            label: 'Calls',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.account_circle_outlined,
+            ),
+            label: 'Profile',
+          ),
+        ],
+      ),
     );
   }
-
 }
