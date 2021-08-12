@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:vdev_chat/src/resources/dialogs/loading_dialog.dart';
+import 'package:vdev_chat/src/resources/home_page.dart';
 
 class SetupPhotoPage extends StatefulWidget {
   const SetupPhotoPage({Key? key}) : super(key: key);
@@ -183,7 +185,7 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: _onNext,
                   child: Container(
                     alignment: Alignment.center,
                     width: double.infinity,
@@ -204,4 +206,22 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
       ),
     );
   }
+
+  _onNext() async {
+    LoadingDialog.show(context);
+    await Future.delayed(Duration(seconds: 1));
+    LoadingDialog.hide(context);
+    Navigator.push(context, MaterialPageRoute(builder: gotoHome));
+  }
+
+  Widget gotoHome(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: env['NAME'].toString(),
+      theme:
+      ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
+      home: HomePage(),
+    );
+  }
+
 }

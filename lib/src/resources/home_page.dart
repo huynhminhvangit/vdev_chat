@@ -15,13 +15,1056 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text(env['NAME'].toString()),
         elevation: 0,
-        backgroundColor: Color(0xfff2f2f2),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
       ),
       body: Container(
-        color: Color(0xfff2f2f2),
+        constraints: BoxConstraints.expand(),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                    'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'David Vang',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                subtitle: Text(
+                  'Hello Charly Dang, ....',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Color(0xff9f9f9f),
+                  ),
+                ),
+                leading: Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 30,
+                      child: FlutterLogo(),
+                    ),
+                    Positioned(
+                      child: Container(
+                        width: 12,
+                        height: 12,
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(6)
+                        ),
+                      ),
+                      bottom: 0,
+                      right: 5,
+                    ),
+                  ],
+                ),
+                trailing: Column(
+                  children: [
+                    Text('9:30'),
+                    SizedBox(height: 5,),
+                    Container(
+                      alignment: Alignment.center,
+                      width: 26,
+                      height: 26,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(13)
+                      ),
+                      child: Text(
+                        '2',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

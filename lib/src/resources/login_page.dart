@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(fontSize: 18, color: Color(0xff9f9f9f)),
                 ),
                 SizedBox(
-                  height: 100,
+                  height: 80,
                 ),
                 DropdownButtonFormField(
                   items: _options.map<DropdownMenuItem<String>>((String value) {
@@ -108,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(fontSize: 18, color: Colors.black),
                 ),
                 SizedBox(
-                  height: 120,
+                  height: 100,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
