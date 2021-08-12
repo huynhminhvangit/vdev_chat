@@ -140,20 +140,20 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                   },
                   child: CircleAvatar(
                     backgroundColor: Colors.transparent,
-                    radius: 130,
+                    radius: 150,
                     child: _image.path == ''
                         ? DottedBorder(
                             color: Colors.grey.shade500,
                             strokeWidth: 1,
                             dashPattern: [16, 8],
-                            radius: Radius.circular(100),
+                            radius: Radius.circular(125),
                             borderType: BorderType.RRect,
                             child: Container(
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(100),
+                                borderRadius: BorderRadius.circular(125),
                               ),
-                              width: 200,
-                              height: 200,
+                              width: 250,
+                              height: 250,
                               child: isLoading
                                   ? CircularProgressIndicator()
                                   : Icon(
@@ -163,11 +163,11 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                             ),
                           )
                         : ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
+                            borderRadius: BorderRadius.circular(125),
                             child: Image.file(
                               File(_image.path),
-                              width: 200,
-                              height: 200,
+                              width: 250,
+                              height: 250,
                               fit: BoxFit.cover,
                             ),
                           ),

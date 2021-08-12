@@ -47,7 +47,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 style: TextStyle(fontSize: 18, color: Color(0xff9e9e9e)),
               ),
               SizedBox(
-                height: 90,
+                height: 120,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
