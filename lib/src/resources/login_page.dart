@@ -13,14 +13,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  List<String> _options = ['Vietnam (+84)', 'Indonesia (+62)', 'Japan(+81)'];
+  final List<String> _options = ['Vietnam (+84)', 'Indonesia (+62)', 'Japan(+81)'];
   String _dropdownValue = 'Vietnam (+84)';
 
   final env = dotenv.env;
 
-  TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
 
-  GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -32,9 +32,9 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        constraints: BoxConstraints.expand(),
+        constraints: const BoxConstraints.expand(),
         alignment: Alignment.center,
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Form(
             key: _globalFormKey,
@@ -43,28 +43,28 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Enter your phone number',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Please confirm your region and enter your',
                   style: TextStyle(fontSize: 18, color: Color(0xff9f9f9f)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   'phone number.',
                   style: TextStyle(fontSize: 18, color: Color(0xff9f9f9f)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 DropdownButtonFormField(
@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(value),
                     );
                   }).toList(),
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30))),
                     prefixIcon: Icon(Icons.language),
@@ -85,16 +85,16 @@ class _LoginPageState extends State<LoginPage> {
                     });
                   },
                   value: _dropdownValue,
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  style: const TextStyle(fontSize: 18, color: Colors.black),
                   iconSize: 0,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 TextFormField(
                   validator: (String? value) => Validator.isValidPhone(value),
                   controller: _phoneController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30))),
                     prefixIcon: Icon(Icons.phone),
@@ -105,14 +105,14 @@ class _LoginPageState extends State<LoginPage> {
                     print('VANG: ' + value.toString());
                     _onLogin();
                   },
-                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  style: const TextStyle(fontSize: 18, color: Colors.black),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xff303030),
+                    primary: const Color(0xff303030),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -122,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                     alignment: Alignment.center,
                     width: double.infinity,
                     height: 60,
-                    child: Text(
+                    child: const Text(
                       'Continue',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
@@ -140,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
 
     if (_globalFormKey.currentState!.validate()) {
       LoadingDialog.show(context);
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       LoadingDialog.hide(context);
       Navigator.push(context, MaterialPageRoute(builder: gotoVerifyCode));
     }
@@ -153,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
       title: env['NAME'].toString(),
       theme:
           ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
-      home: VerifyCodePage(),
+      home: const VerifyCodePage(),
     );
   }
 }

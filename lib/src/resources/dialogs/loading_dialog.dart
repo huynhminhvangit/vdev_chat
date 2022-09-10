@@ -12,7 +12,7 @@ class LoadingDialog {
             color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children: const [
                 CircularProgressIndicator(),
               ],
             ),

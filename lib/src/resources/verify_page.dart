@@ -24,13 +24,13 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
 
   final env = dotenv.env;
 
-  GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        constraints: BoxConstraints.expand(),
+        constraints: const BoxConstraints.expand(),
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Form(
@@ -40,25 +40,25 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Enter code',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                Text(
+                const Text(
                   'We’ve sent the code via SMS to +84 999',
                   style: TextStyle(fontSize: 18, color: Color(0xff9f9f9f)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   '9999 0000.',
                   style: TextStyle(fontSize: 18, color: Color(0xff9f9f9f)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 Row(
@@ -84,7 +84,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         controller: code1Controller,
                         focusNode: code1FocusNode,
                         autofocus: true,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
@@ -100,7 +100,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                           ),
                         ),
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
                         ),
@@ -132,7 +132,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         ],
                         controller: code2Controller,
                         focusNode: code2FocusNode,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
@@ -148,7 +148,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                           ),
                         ),
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
                         ),
@@ -182,7 +182,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         ],
                         controller: code3Controller,
                         focusNode: code3FocusNode,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
@@ -198,7 +198,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                           ),
                         ),
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
                         ),
@@ -232,7 +232,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                         ],
                         controller: code4Controller,
                         focusNode: code4FocusNode,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.all(
                               Radius.circular(50),
@@ -248,7 +248,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                           ),
                         ),
                         textAlign: TextAlign.center,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,
                         ),
@@ -265,19 +265,19 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Didn't get the code? ",
                       style: TextStyle(fontSize: 18, color: Color(0xff9f9f9f)),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: Text(
+                      child: const Text(
                         'Resent code',
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
@@ -296,7 +296,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
   void _checkCodeAndSend() async {
     if (_globalFormKey.currentState!.validate()) {
       LoadingDialog.show(context);
-      await Future.delayed(Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 1));
       LoadingDialog.hide(context);
       Navigator.push(context, MaterialPageRoute(builder: gotoSetupName));
     }
@@ -308,7 +308,7 @@ class _VerifyCodePageState extends State<VerifyCodePage> {
       title: env['NAME'].toString(),
       theme:
           ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
-      home: SetupNamePage(),
+      home: const SetupNamePage(),
     );
   }
 }

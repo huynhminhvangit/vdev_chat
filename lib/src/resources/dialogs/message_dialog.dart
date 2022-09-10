@@ -13,7 +13,7 @@ class MessageDialog {
                 onPressed: () {
                   Navigator.of(context, rootNavigator: true).pop(MessageDialog);
                 },
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );

@@ -39,8 +39,8 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                       _fromCamera();
                       Navigator.of(context).pop();
                     },
-                    leading: Icon(Icons.camera_alt),
-                    title: Text('Camera'),
+                    leading: const Icon(Icons.camera_alt),
+                    title: const Text('Camera'),
                   ),
                   ListTile(
                     onTap: () {
@@ -50,8 +50,8 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                       _fromGallery();
                       Navigator.of(context).pop();
                     },
-                    leading: Icon(Icons.image),
-                    title: Text('Gallery'),
+                    leading: const Icon(Icons.image),
+                    title: const Text('Gallery'),
                   ),
                 ],
               ),
@@ -92,9 +92,9 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
         elevation: 0,
         actions: [
           Container(
-            padding: EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 20),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               '2 of 2',
               style: TextStyle(
                 fontSize: 18,
@@ -105,8 +105,8 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.all(20),
+        constraints: const BoxConstraints.expand(),
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Form(
@@ -116,24 +116,24 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Add your photo',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Get more people to know you better.',
                   style: TextStyle(
                     fontSize: 18,
                     color: Color(0xff9f9f9f),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 GestureDetector(
@@ -148,7 +148,7 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                             color: Colors.grey.shade500,
                             strokeWidth: 1,
                             dashPattern: [16, 8],
-                            radius: Radius.circular(125),
+                            radius: const Radius.circular(125),
                             borderType: BorderType.RRect,
                             child: Container(
                               decoration: BoxDecoration(
@@ -157,7 +157,7 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                               width: 250,
                               height: 250,
                               child: isLoading
-                                  ? CircularProgressIndicator()
+                                  ? const CircularProgressIndicator()
                                   : Icon(
                                       Icons.camera_alt_outlined,
                                       color: Colors.grey.shade500,
@@ -175,12 +175,12 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                           ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xff303030),
+                    primary: const Color(0xff303030),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -190,7 +190,7 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
                     alignment: Alignment.center,
                     width: double.infinity,
                     height: 60,
-                    child: Text(
+                    child: const Text(
                       'Next',
                       style: TextStyle(
                         fontSize: 18,
@@ -209,7 +209,7 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
 
   _onNext() async {
     LoadingDialog.show(context);
-    await Future.delayed(Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
     LoadingDialog.hide(context);
     Navigator.push(context, MaterialPageRoute(builder: gotoHome));
   }
@@ -220,7 +220,7 @@ class _SetupPhotoPageState extends State<SetupPhotoPage> {
       title: env['NAME'].toString(),
       theme:
       ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 

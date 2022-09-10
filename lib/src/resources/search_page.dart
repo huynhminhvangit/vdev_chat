@@ -11,9 +11,9 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   final env = dotenv.env;
 
-  GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
 
-  TextEditingController _keywordController = TextEditingController();
+  final TextEditingController _keywordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +24,13 @@ class _SearchPageState extends State<SearchPage> {
         title: Container(
           child: TextFormField(
             controller: _keywordController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 labelText: 'Search...',
                 labelStyle: TextStyle(
                   fontSize: 20,
                   color: Color(0xff9f9f9f),
                 )),
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 20,
               color: Colors.black,
             ),
@@ -40,8 +40,8 @@ class _SearchPageState extends State<SearchPage> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.all(20),
+        constraints: const BoxConstraints.expand(),
         child: SingleChildScrollView(
           child: Stack(
             children: [
@@ -51,21 +51,21 @@ class _SearchPageState extends State<SearchPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      padding: EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10, right: 10),
                       height: 42,
                       width: 107,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffeeeeee),
+                        color: const Color(0xffeeeeee),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.messenger_outline,
                             size: 18,
                           ),
-                          Text(
+                          const Text(
                             'Chats',
                             style: TextStyle(
                               fontSize: 18,
@@ -74,23 +74,23 @@ class _SearchPageState extends State<SearchPage> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     Container(
-                      padding: EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10, right: 10),
                       height: 42,
                       width: 107,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffeeeeee),
+                        color: const Color(0xffeeeeee),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.image_outlined,
                             size: 18,
                           ),
-                          Text(
+                          const Text(
                             'Photos',
                             style: TextStyle(
                               fontSize: 18,
@@ -99,23 +99,23 @@ class _SearchPageState extends State<SearchPage> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     Container(
-                      padding: EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10, right: 10),
                       height: 42,
                       width: 107,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffeeeeee),
+                        color: const Color(0xffeeeeee),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.videocam_outlined,
                             size: 18,
                           ),
-                          Text(
+                          const Text(
                             'Videos',
                             style: TextStyle(
                               fontSize: 18,
@@ -124,23 +124,23 @@ class _SearchPageState extends State<SearchPage> {
                         ],
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    const SizedBox(width: 10,),
                     Container(
-                      padding: EdgeInsets.only(left: 10, right: 10),
+                      padding: const EdgeInsets.only(left: 10, right: 10),
                       height: 42,
                       width: 107,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color(0xffeeeeee),
+                        color: const Color(0xffeeeeee),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.headset_outlined,
                             size: 18,
                           ),
-                          Text(
+                          const Text(
                             'Audios',
                             style: TextStyle(
                               fontSize: 18,

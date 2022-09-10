@@ -17,8 +17,8 @@ class _WelcomePageState extends State<WelcomePage> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(20),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.all(20),
+        constraints: const BoxConstraints.expand(),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -26,32 +26,32 @@ class _WelcomePageState extends State<WelcomePage> {
             children: [
               Text(
                 env['NAME'].toString(),
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               Image.asset('assets/images/illustration.png'),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Text(
+              const Text(
                 'Let\'s talk with your friends and family',
                 style: TextStyle(fontSize: 18, color: Color(0xff9e9e9e)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 'wherever and whenever',
                 style: TextStyle(fontSize: 18, color: Color(0xff9e9e9e)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 120,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xff303030),
+                  primary: const Color(0xff303030),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
@@ -61,13 +61,13 @@ class _WelcomePageState extends State<WelcomePage> {
                   alignment: Alignment.center,
                   width: double.infinity,
                   height: 60,
-                  child: Text(
+                  child: const Text(
                     'Continue with phone',
                     style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               )
             ],
@@ -87,7 +87,7 @@ class _WelcomePageState extends State<WelcomePage> {
       title: env['NAME'].toString(),
       theme:
           ThemeData(fontFamily: 'Roboto', primaryColor: Colors.blue.shade100),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }

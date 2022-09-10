@@ -13,9 +13,9 @@ class SetupNamePage extends StatefulWidget {
 class _SetupNamePageState extends State<SetupNamePage> {
   final env = dotenv.env;
 
-  GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _globalFormKey = GlobalKey<FormState>();
 
-  TextEditingController _nameController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +25,9 @@ class _SetupNamePageState extends State<SetupNamePage> {
         elevation: 0,
         actions: [
           Container(
-            padding: EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.only(right: 20),
             alignment: Alignment.center,
-            child: Text(
+            child: const Text(
               '1 of 2',
               style: TextStyle(
                 fontSize: 18,
@@ -38,8 +38,8 @@ class _SetupNamePageState extends State<SetupNamePage> {
         ],
       ),
       body: Container(
-        padding: EdgeInsets.all(20),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.all(20),
+        constraints: const BoxConstraints.expand(),
         alignment: Alignment.center,
         child: SingleChildScrollView(
           child: Form(
@@ -49,30 +49,30 @@ class _SetupNamePageState extends State<SetupNamePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Create your name',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   'Get more people to know your name.',
                   style: TextStyle(
                     fontSize: 18,
                     color: Color(0xff9f9f9f),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 TextFormField(
                   validator: (String? value) => Validator.isValidName(value),
                   controller: _nameController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(30))),
                     prefixIcon: Icon(Icons.person_outline),
@@ -83,17 +83,17 @@ class _SetupNamePageState extends State<SetupNamePage> {
                     print('VANG: ' + value.toString());
                     _onNext();
                   },
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     color: Colors.black,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xff303030),
+                    primary: const Color(0xff303030),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
@@ -103,7 +103,7 @@ class _SetupNamePageState extends State<SetupNamePage> {
                     alignment: Alignment.center,
                     width: double.infinity,
                     height: 60,
-                    child: Text(
+                    child: const Text(
                       'Next',
                       style: TextStyle(
                         fontSize: 18,
@@ -127,6 +127,6 @@ class _SetupNamePageState extends State<SetupNamePage> {
   }
 
   Widget gotoSetupPhoto(BuildContext context) {
-    return SetupPhotoPage();
+    return const SetupPhotoPage();
   }
 }
